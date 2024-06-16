@@ -21,4 +21,12 @@ module "QA-app" {
     my_table = "my_db_table"
 }
 
-
+# Staging ENV
+module "staging-app" {
+    source = "./modules/Infrastructure"
+    Env_name = "staging"
+    instance_type = "t2.large"
+    ami_id = "ami-04b70fa74e99c3917"
+    instance_name ="Module_Server"
+    my_table = "my_db_table"
+}
